@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.CANCEL_NOTIFICATION" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID permission"/>
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="DO-IT"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DOIT"
+        tools:targetApi="31">
+        <activity
+            android:name=".licenses_activity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-xxxxx~xxxxx" />
+
+        <activity
+            android:name=".OnBoardingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/loginActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/settingsTheme" />
+        <activity
+            android:name=".DueProjects"
+            android:theme="@style/pendingProjects"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:theme="@style/splashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.allyants.notifyme.NotificationPublisher" />
+        <receiver
+            android:name="com.allyants.notifyme.BootNotifyMe"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".RegisterNewUserActivity"
+            android:theme="@style/loginActivity"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/loginActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".phasesForProjectActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/phasesForProject" />
+        <activity
+            android:name=".StepsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:theme="@style/stepsForPhase" />
+        <activity
+            android:name=".PendingProjects"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/pendingProjects" />
+        <activity
+            android:name=".AddNewProjects"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/addNewProjects" />
+        <activity
+            android:name=".CompletedProjects"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@style/pendingProjects" />
+        <receiver android:name=".broadcast_receiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="Notification_Action"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

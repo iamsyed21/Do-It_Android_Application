@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/coordinatorLayout"
+    android:layout_height="match_parent"
+    android:background="@color/Primary_Background_Dark"
+    tools:context=".StepsActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Primary_Background_Dark">
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/theMainPhaseLinearLayout"
+            android:background="@drawable/steps_page_phases_tile"
+            android:paddingTop="4dp"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:paddingBottom="6dp"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/ediTextRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:padding="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.65"
+                        android:background="@drawable/light_edittext_background">
+
+                        <TextView
+                            android:id="@+id/phaseNameTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/montserrat_reg"
+                            android:hint="ProjectPhase"
+                            android:inputType="text"
+                            android:padding="6dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/Primary_Element_Dark"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/editPhaseNameRelativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:visibility="gone"
+                            android:background="@drawable/light_edittext_background"
+                            android:padding="4dp"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp">
+
+                            <EditText
+                                android:id="@+id/phaseTitleEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:background="@null"
+                                android:hint="Enter Phase Name"
+                                android:fontFamily="@font/merriweather"
+                                android:inputType="text"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/Primary_Element_Dark"
+                                android:textColorHint="@color/Primary_Element_Dark"
+                                android:textSize="18sp"
+                                android:drawableEnd="@drawable/baseline_edit_24_purple"
+                                android:textStyle="bold"
+                                tools:ignore="TouchTargetSizeCheck" />
+
+
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:id="@+id/detailsDropRelativeLayout"
+                        android:layout_weight="0.20">
+
+
+                        <TextView
+                            android:id="@+id/detailsTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="6dp"
+                            android:fontFamily="@font/open_sans_reg"
+                            android:padding="1dp"
+                            android:text="Details:"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/Blender_Dark"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+
+
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="44dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/detailsTextView"
+                        android:layout_alignParentEnd="true"
+                        android:rotation="90"
+                        android:id="@+id/showDetailsDropDownArrow"
+                        android:src="@drawable/twotone_arrow_drop_down_circle_24"/>
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phaseDetailsDropDown"
+                android:visibility="gone"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_background"
+                        android:layout_marginTop="4dp"
+                        android:elevation="6dp"
+                        android:layout_marginEnd="2dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_marginStart="6dp">
+
+                        <com.github.lzyzsd.circleprogress.ArcProgress
+                            android:id="@+id/phaseProgressTotalBar"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true"
+                            app:arc_bottom_text="Progress"
+                            app:arc_bottom_text_size="10sp"
+                            app:arc_finished_color="#C0EEE4"
+                            app:arc_progress="38"
+                            app:arc_stroke_width="6dp"
+                            app:arc_text_color="@color/Blender_Dark"
+                            app:arc_unfinished_color="#545a6e" />
+
+                    </RelativeLayout>
+
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/secondary_background_dark_tile"
+                    android:layout_marginTop="4dp"
+                    android:elevation="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginStart="3dp"
+                    android:padding="6dp"
+                    android:layout_weight="0.35">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/deadLineLinearLayout"
+                            android:layout_weight="0.5"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="2dp"
+                                android:layout_weight="0.3">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Deadline:"
+                                    android:fontFamily="@font/open_sans_reg"
+                                    android:id="@+id/deadLineHeadline"
+                                    android:textColor="@color/white"
+                                    android:alpha="0.5"
+                                    android:textStyle="bold"
+                                    android:textSize="12dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Set Deadline"
+                                    android:fontFamily="@font/lato"
+                                    android:id="@+id/PhaseDeadlineTextView"
+                                    android:textStyle="bold"
+                                    android:paddingTop="2dp"
+                                    android:layout_below="@+id/deadLineHeadline"
+                                    android:textColor="@color/Blender_Dark"
+                                    android:textSize="16sp"/>
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="6dp"
+                                android:elevation="10dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:background="@drawable/icon_background"
+                                android:layout_weight="0.85">
+
+                                <ImageView
+                                    android:id="@+id/setPhaseNotification"
+                                    android:layout_width="38dp"
+                                    android:layout_height="38dp"
+                                    android:layout_centerInParent="true"
+                                    android:elevation="6dp"
+                                    android:src="@drawable/baseline_notification_add_24" />
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_marginTop="2dp"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/open_sans_reg"
+                                android:layout_alignParentTop="true"
+                                android:id="@+id/priorityDescriptionTextView"
+                                android:layout_alignParentStart="true"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:alpha="0.5"
+                                android:text="Priority:"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/phasePriorityTextView"
+                                android:paddingTop="2dp"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/lato"
+                                android:layout_centerVertical="true"
+                                android:layout_below="@+id/priorityDescriptionTextView"
+                                android:textColor="#00b894 "
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:text="Low"/>
+
+                            <RelativeLayout
+                                android:id="@+id/phaseProgressRelativeLayout"
+                                android:layout_width="100dp"
+                                android:layout_height="30dp"
+                                android:elevation="4dp"
+                                android:layout_marginStart="25dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="5dp"
+                                android:layout_centerVertical="true"
+                                android:background="@color/IN_PROGRESS">
+
+                                <TextView
+                                    android:id="@+id/PhaseProgressStateTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/lato"
+                                    android:gravity="center"
+                                    android:text="IN PROGRESS"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:id="@+id/addPhasesToTheProjectLinearLayout"
+            android:layout_below="@+id/theMainPhaseLinearLayout"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#BFC7D0"
+                    android:text="Phase steps:"
+                    android:fontFamily="@font/montserrat_reg"
+                    android:textSize="26sp"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4">
+
+                <Button
+                    android:id="@+id/addNewStepsId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34sp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_design_one"
+                    android:fontFamily="@font/open_sans_reg"
+                    android:paddingStart="24dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="4dp"
+                    android:text="Add Steps"
+                    android:textColor="#BFC7D0"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_below="@+id/addPhasesToTheProjectLinearLayout"
+            android:id="@+id/newStepsRecyclerView"
+            />
+
+        <nl.dionsegijn.konfetti.xml.KonfettiView
+            android:id="@+id/konfettiView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/nothing_yet_image"
+            android:alpha="0.8"
+            android:visibility="gone"
+            android:layout_marginTop="60dp"
+            android:layout_below="@+id/addPhasesToTheProjectLinearLayout"
+            android:id="@+id/nothingYetImage"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

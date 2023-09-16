@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterNewUserActivity">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#BFC7D0"
+        android:contentDescription="Going back"
+        android:id="@+id/goBackButton"
+        android:backgroundTint="#BFC7D0"
+        android:src="@drawable/baseline_arrow_back_24_pink" />
+
+
+    <RelativeLayout
+        android:id="@+id/registerMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/login_tombstone_primary_element">
+
+
+        <TextView
+            android:id="@+id/signUpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/montserrat_reg"
+            android:padding="10dp"
+            android:text="Sign Up\nHere!"
+            android:textColor="@color/Blender_Dark"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/newUserNameID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signUpTextView"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#BFC7D0"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/lato_semi_bold"
+            android:hint="Name"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="2dp"
+            android:paddingStart="12dp"
+            android:textColor="@color/Blender_Dark"
+            android:textColorHint="#BFC7D0"
+            android:textSize="25sp" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/newUserEmailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newUserNameID"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#BFC7D0"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/lato_semi_bold"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="2dp"
+            android:paddingStart="12dp"
+            android:textColor="@color/Blender_Dark"
+            android:textColorHint="#BFC7D0"
+            android:textSize="25sp" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/newUserPassWordID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newUserEmailId"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#BFC7D0"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/lato_semi_bold"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="2dp"
+            android:paddingStart="12dp"
+            android:textColor="@color/Blender_Dark"
+            android:textColorHint="#BFC7D0"
+            android:textSize="25sp" />
+
+
+        <Button
+            android:id="@+id/registerNewUserButton"
+            android:layout_width="wrap_content"
+            android:paddingTop="8dp"
+            android:background="@drawable/button_design_two"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newUserPassWordID"
+            android:fontFamily="@font/open_sans_reg"
+            android:paddingBottom="8dp"
+            android:paddingStart="24dp"
+            android:textSize="18sp"
+            android:paddingEnd="24dp"
+            android:textColor="#16213E"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#BFC7D0"
+            android:text="Sign Up" />
+
+        <TextView
+            android:id="@+id/oRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/registerNewUserButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:alpha="0.7"
+            android:fontFamily="@font/open_sans_reg"
+            android:text="or Sign in with"
+            android:textColor="#BFC7D0"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/loginWithGoogleRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/oRTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/signInWithGoogle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:elevation="10dp"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/google_round_button" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginWithGoogleRelativeLayout"
+            android:layout_marginStart="34dp"
+            android:id="@+id/termsAndConditionsRelativeLayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="34dp"
+            android:background="@drawable/terms_and_conditions_background"
+            android:padding="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/merriweather"
+                android:padding="6dp"
+                android:text="Read Our Terms And Conditions"
+                android:textAlignment="center"
+                android:textColor="#16213E"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitEnd"
+        android:src="@drawable/time_to_do_it"
+        android:layout_above="@+id/registerMainLayout"
+        android:id="@+id/timeToDoItImage"/>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="70dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_height="70dp"
+        android:layout_gravity="center" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/merriweather"
+        android:alpha="0.8"
+        android:textColor="#BFC7D0"
+        android:textSize="13sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Developed By 21codes.com"/>
+
+</RelativeLayout>

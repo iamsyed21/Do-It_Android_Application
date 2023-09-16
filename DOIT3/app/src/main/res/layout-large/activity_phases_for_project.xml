@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Primary_Background_Dark"
+    tools:context=".phasesForProjectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/theProjectTileView"
+        android:background="@drawable/phases_page_project_tile"
+        android:paddingTop="6dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:orientation="vertical">
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/ediTextRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:padding="4dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.60"
+                    android:background="@drawable/light_edittext_background">
+
+                    <TextView
+                        android:id="@+id/projectNameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/montserrat_reg"
+                        android:hint="Project Name"
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/Primary_Element_Dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/editProjectNameRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:background="@drawable/light_edittext_background"
+                        android:padding="8dp">
+
+                        <EditText
+                            android:id="@+id/stepTitleEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:background="@null"
+                            android:hint="Enter Project Name"
+                            android:inputType="text"
+                            android:fontFamily="@font/merriweather"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/Primary_Element_Dark"
+                            android:textColorHint="@color/Primary_Element_Dark"
+                            android:textSize="18sp"
+                            android:drawableEnd="@drawable/baseline_edit_24_darker"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:id="@+id/detailsDropRelativeLayout"
+                    android:layout_weight="0.15">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/Blender_Dark"
+                        android:textStyle="bold"
+                        android:id="@+id/detailsTextView"
+                        android:fontFamily="@font/open_sans_reg"
+                        android:layout_centerInParent="true"
+                        android:textSize="14sp"
+                        android:textAlignment="textEnd"
+                        android:text="Details:"
+                        android:padding="1dp"
+                        android:layout_marginStart="6dp"/>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/baseline_delete_24"
+                        android:layout_centerInParent="true"
+                        android:elevation="10dp"
+                        android:visibility="gone"
+                        android:id="@+id/deleteThisProjectImageView"/>
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/detailsTextView"
+                    android:layout_alignParentEnd="true"
+                    android:rotation="90"
+                    android:id="@+id/showDetailsDropDownArrow"
+                    android:src="@drawable/twotone_arrow_drop_down_circle_24"/>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:id="@+id/otherDetailsLinearLayouts"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:layout_margin="1dp"
+                android:padding="4dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:elevation="10dp"
+                    android:id="@+id/deadlineRealativeLayout"
+                    android:background="@drawable/base_tile_slightly_light">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Deadline"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:id="@+id/deadlineOnTextView"
+                        android:fontFamily="@font/open_sans_reg"
+                        android:textColor="@color/white"
+                        android:alpha="0.7"
+                        android:paddingTop="6dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/projectDeadLineTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deadlineOnTextView"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/lato"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="4dp"
+                        android:text="22 -FEB -23"
+                        android:textAlignment="center"
+                        android:textColor="@color/Blender_Dark"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deadlineRealativeLayout">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Importance:"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/open_sans_reg"
+                        android:layout_marginTop="4dp"
+                        android:textAlignment="center"
+                        android:id="@+id/projectImportanceHeadingTextView"
+                        android:textSize="14sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="36dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:id="@+id/projectImportanceRelativeLayout"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/green_badge_background"
+                        android:layout_below="@+id/projectImportanceHeadingTextView">
+
+                        <TextView
+                            android:id="@+id/projectImportanceTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/lato"
+                            android:text="HIGH"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.55"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingEnd="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingStart="4dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/icon_background"
+                            android:id="@+id/totalPhasesRelativeLayout">
+
+                            <com.github.lzyzsd.circleprogress.ArcProgress
+                                android:id="@+id/projectProgressTotalBar"
+                                android:layout_width="110dp"
+                                android:layout_height="100dp"
+                                app:arc_progress="38"
+                                android:layout_centerHorizontal="true"
+                                app:arc_stroke_width="6dp"
+                                app:arc_bottom_text_size="12sp"
+                                app:arc_finished_color="#C0EEE4"
+                                app:arc_unfinished_color="@color/Secondary_Background_Dark"
+                                app:arc_text_color="@color/Blender_Dark"
+                                app:arc_bottom_text="Progress"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/projectProgressTotalBar"
+                                android:layout_centerHorizontal="true"
+                                android:textAlignment="center"
+                                android:layout_marginTop="-2dp"
+                                android:fontFamily="@font/merriweather"
+                                android:id="@+id/projectProgressState"
+                                android:text="in progress"
+                                android:textColor="#C0EEE4"
+                                android:padding="4dp"
+                                android:textStyle="bold"
+                                android:textSize="14sp"/>
+
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.45">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="1dp"
+                            android:elevation="10dp"
+                            android:id="@+id/daysRemaningRelativeLayout"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/icon_background">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/open_sans_reg"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:paddingTop="5dp"
+                                android:textAlignment="center"
+                                android:text="Due"
+                                android:visibility="invisible"
+                                android:alpha="0.8"
+                                android:textStyle="bold"
+                                android:layout_alignParentTop="true"
+                                android:id="@+id/isDateDueTextView"/>
+
+                            <TextView
+                                android:id="@+id/daysToGoTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/isDateDueTextView"
+                                android:padding="2dp"
+                                android:text="9"
+                                android:layout_marginTop="-4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:textColor="@color/Blender_Dark"
+                                android:textSize="42sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/daysToGoDescriptionTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/daysToGoTextView"
+                                android:gravity="center"
+                                android:fontFamily="@font/open_sans_reg"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:layout_marginTop="-1dp"
+                                android:paddingBottom="8dp"
+                                android:text="Days to go"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/daysRemaningRelativeLayout"
+                            android:layout_marginTop="4dp">
+
+                            <TextView
+                                android:id="@+id/projectTagTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:alpha="0.8"
+                                android:background="@drawable/tag_background"
+                                android:fontFamily="@font/lato"
+                                android:paddingStart="10dp"
+                                android:paddingTop="6dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="6dp"
+                                android:text="#Custom"
+                                android:textColor="@color/Secondary_Background_Dark"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+        android:id="@+id/addPhasesToTheProjectLinearLayout"
+        android:layout_below="@+id/theProjectTileView"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#BFC7D0"
+                android:text="Phase steps:"
+                android:textSize="26sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4">
+
+            <Button
+                android:id="@+id/addPhaseToTheProjectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_design_one"
+                android:paddingStart="24dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/open_sans_reg"
+                android:textStyle="bold"
+                android:paddingEnd="24dp"
+                android:paddingBottom="4dp"
+                android:text="Add Phases"
+                android:textColor="#BFC7D0" />
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addPhasesToTheProjectLinearLayout"
+        android:src="@drawable/no_phase_panda"
+        android:id="@+id/no_phases_panda_image"
+        android:padding="20dp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/addPhasesToTheProjectLinearLayout"
+        android:padding="1dp"
+        android:id="@+id/allStepsForPhaseRecyclerView"/>
+
+
+
+</RelativeLayout>

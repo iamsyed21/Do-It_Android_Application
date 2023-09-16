@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/loginMainRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/login_tombstone_primary_element"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/logInEmailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#BFC7D0"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/lato_semi_bold"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="2dp"
+            android:paddingStart="12dp"
+            android:textColor="@color/Blender_Dark"
+            android:textColorHint="#BFC7D0"
+            android:textSize="20sp" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/loginPassWordId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logInEmailId"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#BFC7D0"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/lato_semi_bold"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/Blender_Dark"
+            android:textColorHint="#BFC7D0"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/forgotPassWordTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginPassWordId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/montserrat_reg"
+            android:text="Forgot Your Password?"
+            android:textColor="@color/Blender_Dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/loginButtonsLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forgotPassWordTextView"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/registerNewUserButton"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/open_sans_reg"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_design_one"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_centerInParent="true"
+                    android:text="Register User" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/loginUserButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/button_design_two"
+                    android:fontFamily="@font/open_sans_reg"
+                    android:paddingStart="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="8dp"
+                    android:text="Log In"
+                    android:textColor="#16213E"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/oRTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginButtonsLinearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:alpha="0.7"
+            android:fontFamily="@font/open_sans_reg"
+            android:text="or login with"
+            android:textColor="#BFC7D0"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/loginWithGoogleRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/oRTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/signInWithGoogle"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:elevation="10dp"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/google_round_button" />
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="360dp"
+        android:src="@drawable/welcome_panda"
+        android:layout_above="@+id/loginMainRelativeLayout"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginEnd="-14dp"
+        android:scaleType="fitEnd"
+        android:layout_marginStart="-5dp"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loginMainRelativeLayout"
+        android:text="Login To\nYour Account!"
+        android:textSize="26sp"
+        android:fontFamily="@font/montserrat_reg"
+        android:paddingTop="18dp"
+        android:paddingStart="10dp"
+        android:background="@drawable/login_textview_background"
+        android:id="@+id/loginToYourAccountTextView"
+        android:textColor="@color/Blender_Dark"
+        android:textStyle="bold"
+        android:layout_marginBottom="-45dp"/>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="70dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_height="70dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/merriweather"
+        android:alpha="0.8"
+        android:textColor="#BFC7D0"
+        android:textSize="13sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Developed By 21codes.com"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Primary_Background_Dark"
+    tools:context=".SettingsActivity">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:id="@+id/goBackImageView"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:id="@+id/userInfoRelativeLayout"
+        android:layout_below="@+id/goBackImageView">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="4dp"
+            android:fontFamily="@font/montserrat_reg"
+            android:textSize="40sp"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/Blender_Dark"
+            android:textStyle="bold"
+            android:alpha="0.85"
+            android:id="@+id/hiUserTextView"
+            android:text="Hi, User"/>
+
+        <TextView
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="4dp"
+            android:layout_marginStart="2dp"
+            android:layout_below="@+id/hiUserTextView"
+            android:textSize="70sp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginTop="-14dp"
+            android:textColor="@color/Blender_Dark"
+            android:textStyle="bold"
+            android:id="@+id/userNameTextViw"
+            android:text="Hi, User"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/panda_profile_picture"
+            android:scaleType="centerCrop"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/Completed"
+            app:civ_border_overlay="true"
+            android:id="@+id/defaultPandaPictureImageView"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/googleProfilePicture"
+            android:layout_width="120dp"
+            android:visibility="gone"
+            android:layout_height="120dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/welcome_panda"
+            android:scaleType="centerCrop"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/Completed"
+            app:civ_border_overlay="true" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/userInfoRelativeLayout"
+        android:textSize="26sp"
+        android:fontFamily="@font/open_sans_reg"
+        android:textColor="@color/Blender_Dark"
+        android:text="Not connected To the Internet."
+        android:id="@+id/internetStatusTextView"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/internetStatusTextView"
+        android:layout_above="@+id/adView"
+        android:padding="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list_view_settings"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-xxxxx/xxxxx">
+    </com.google.android.gms.ads.AdView>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Primary_Background_Dark"
+    tools:context=".PendingProjects">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pending Projects"
+        android:textSize="34sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat_reg"
+        android:textStyle="bold"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/Blender_Dark"
+        android:id="@+id/pendingProjectsMainTextView"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchRelativeLayout"
+        android:background="@drawable/light_edittext_background"
+        android:padding="4dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_below="@+id/pendingProjectsMainTextView">
+
+
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            android:padding="4dp"
+            app:queryHint="Search Your Project Here..."
+            android:id="@+id/projectSearchBarID"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/searchRelativeLayout"
+        android:visibility="gone"
+        android:src="@drawable/no_pending_projects"
+        android:padding="20dp"
+        android:id="@+id/noPendingProjectsImageView"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_marginTop="6dp"
+        android:padding="6dp"
+        android:layout_below="@+id/searchRelativeLayout"
+        android:id="@+id/pendingProjectsRecyclerView"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-xxxxx/xxxxx">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

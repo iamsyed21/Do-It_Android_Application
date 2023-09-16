@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="6dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/theProjectTileView"
+            android:background="@drawable/basic_tile_dark"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="#Custom"
+                    android:fontFamily="@font/merriweather"
+                    android:background="@drawable/tag_background"
+                    android:alpha="0.8"
+                    android:id="@+id/projectTagTextView"
+                    android:textColor="@color/Secondary_Background_Dark"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:textSize="14sp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/projectProgressState"
+                    android:text="in progress"
+                    android:fontFamily="@font/merriweather"
+                    android:textColor="#C0EEE4"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="16sp"/>
+
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/ediTextRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:elevation="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/light_edittext_background"
+                android:padding="8dp">
+
+
+                <TextView
+                    android:id="@+id/projectNameEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:background="@null"
+                    android:fontFamily="@font/montserrat_reg"
+                    android:hint="My First Application"
+                    android:inputType="text"
+                    android:paddingStart="4dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/Primary_Element_Dark"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:layout_margin="1dp"
+                    android:padding="4dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:elevation="10dp"
+                        android:id="@+id/deadlineRealativeLayout"
+                        android:background="@drawable/base_tile_slightly_light">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deadline"
+                            android:fontFamily="@font/open_sans_reg"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:id="@+id/deadlineOnTextView"
+                            android:textColor="@color/white"
+                            android:alpha="0.7"
+                            android:paddingTop="6dp"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/projectDeadLineTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/deadlineOnTextView"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="6dp"
+                            android:fontFamily="@font/lato"
+                            android:paddingStart="2dp"
+                            android:paddingEnd="2dp"
+                            android:paddingBottom="4dp"
+                            android:text="22 -FEB -23, 22:00"
+                            android:textAlignment="center"
+                            android:textColor="@color/Blender_Dark"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/deadlineRealativeLayout">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Importance:"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:alpha="0.6"
+                            android:fontFamily="@font/open_sans_reg"
+                            android:layout_marginTop="8dp"
+                            android:textAlignment="center"
+                            android:id="@+id/projectImportanceHeadingTextView"
+                            android:textSize="14sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/importanceRelativeLayout"
+                            android:elevation="8dp"
+                            android:layout_marginBottom="6dp"
+                            android:background="@drawable/green_badge_background"
+                            android:layout_below="@+id/projectImportanceHeadingTextView">
+
+                            <TextView
+                                android:id="@+id/projectImportanceTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="HIGH"
+                                android:fontFamily="@font/merriweather"
+                                android:textColor="@color/Secondary_Background_Dark"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="0.65"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="115dp"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="1dp">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.55"
+                            android:elevation="10dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="4dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:paddingStart="6dp"
+                                android:paddingEnd="6dp"
+                                android:background="@drawable/icon_background"
+                                android:id="@+id/totalPhasesRelativeLayout">
+
+                                <com.github.lzyzsd.circleprogress.ArcProgress
+                                    android:id="@+id/projectProgressTotalBar"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    app:arc_progress="38"
+                                    android:layout_centerInParent="true"
+                                    app:arc_stroke_width="6dp"
+                                    app:arc_bottom_text_size="12sp"
+                                    app:arc_finished_color="#C0EEE4"
+                                    app:arc_unfinished_color="@color/Secondary_Background_Dark"
+                                    app:arc_text_color="@color/Blender_Dark"
+                                    app:arc_bottom_text="Progress"/>
+
+                            </RelativeLayout>
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.45">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="1dp"
+                                android:elevation="10dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/icon_background">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/open_sans_reg"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:paddingTop="4dp"
+                                    android:textAlignment="center"
+                                    android:text="Due"
+                                    android:alpha="0.75"
+                                    android:visibility="invisible"
+                                    android:textStyle="bold"
+                                    android:layout_alignParentTop="true"
+                                    android:id="@+id/isDateDueTextView"/>
+
+                                <TextView
+                                    android:id="@+id/daysToGoTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/isDateDueTextView"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="2dp"
+                                    android:text="9"
+                                    android:layout_marginTop="-14dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:textColor="#C0EEE4"
+                                    android:textSize="54sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/daysToGoDescriptionTextView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/daysToGoTextView"
+                                    android:layout_marginTop="-1dp"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/lato_semi_bold"
+                                    android:paddingStart="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:paddingBottom="8dp"
+                                    android:text="Days to go"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/light_edittext_background"
+                        android:elevation="10dp"
+                        android:id="@+id/exploreProjectRelativeLayout"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="2dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/merriweather"
+                            android:text="Explore Project"
+                            android:textAlignment="center"
+                            android:textColor="@color/Primary_Element_Dark"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_below="@+id/theProjectTileView">
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
