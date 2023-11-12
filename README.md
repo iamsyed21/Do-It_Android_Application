@@ -4,11 +4,19 @@
 
 [Application URL](https://play.google.com/store/apps/details?id=com.the21codes.do_it) <!-- Replace '#' with the actual URL -->
 
-![Do-It Interface](/doit1.png) <!-- Replace 'image1.jpg' with your image file name -->
-_Do-It offers an engaging user interface with easy-to-navigate menus and clear task categorization. Deadline reminders and note-taking features ensure that users never miss important tasks._
+<p align="center">
+  <img src="/doit1.png" alt="Do-It Interface" />
+</p>
+<p align="center">
+  _Do-It offers an engaging user interface with easy-to-navigate menus and clear task categorization. Deadline reminders and note-taking features ensure that users never miss important tasks._
+</p>
 
-![Task Management Features](/doit2.png) <!-- Replace 'image2.jpg' with your image file name -->
-_With push notification services, users are consistently informed about their task deadlines and updates, increasing engagement and productivity._
+<p align="center">
+  <img src="/doit2.png" alt="Task Management Features" />
+</p>
+<p align="center">
+  _With push notification services, users are consistently informed about their task deadlines and updates, increasing engagement and productivity._
+</p>
 
 ### Tech Stack
 - Java
