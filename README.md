@@ -17,6 +17,9 @@
 <p align="center">
   With push notification services, users are consistently informed about their task deadlines and updates, increasing engagement and productivity.
 </p>
+<p align="center">
+  <img src="/doit3.png" alt="Task Management Features" />
+</p>
 
 ### Tech Stack
 - Java
